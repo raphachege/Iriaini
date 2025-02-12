@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Iriaini Tea Factory</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles/style.css">
+
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="styles/responsive.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg custom-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.png" alt="Iriaini Tea Factory Logo" class="logo">
+                Iriaini Tea Factory
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="products.html">Our Tea</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Sustainability</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="container my-5">
+        <h2 class="text-center mb-4">Contact Us</h2>
+        <p class="text-center mb-4">
+            Have any questions or inquiries? Feel free to reach out to us. We're happy to hear from you!
+        </p>
+
+        <div class="row">
+            <!-- Contact Form -->
+            <div class="col-md-6">
+                <form action="#" method="POST" class="needs-validation" novalidate>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Full Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter your full name" required>
+                        <div class="invalid-feedback">Please enter your name.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                        <div class="invalid-feedback">Please enter a valid email address.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Phone Number</label>
+                        <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
+                        <div class="invalid-feedback">Please enter a valid phone number.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" rows="5" placeholder="Write your message here..." required></textarea>
+                        <div class="invalid-feedback">Please enter your message.</div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+
+            <!-- Contact Info & Map -->
+            <div class="col-md-6">
+                <h4>Our Location</h4>
+                <p>123 Tea Lane, Nanyuki, Kenya</p>
+
+                <h5>Phone</h5>
+                <p>+254 123 456 789</p>
+
+                <h5>Email</h5>
+                <p>info@iriainiteafactory.com</p>
+
+                <h5>Opening Hours</h5>
+                <p>Monday - Friday: 8:00 AM - 5:00 PM</p>
+                <p>Saturday: 9:00 AM - 1:00 PM</p>
+                <p>Sunday & Public Holidays: Closed</p>
+
+                <!-- Google Map -->
+                <div class="map-container mt-4">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.6385622318653!2d36.90558666997839!3d-0.5438848340251572!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1828f381cf6bf27b%3A0x2ab964dc4957e587!2sIriain%C4%A9%20Tea%20Factory!5e0!3m2!1sen!2ske!4v1732786824073!5m2!1sen!2ske" 
+                        width="100%" 
+                        height="350" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+
+                <!-- Social Media Links -->
+                <div class="social-links text-center mt-4">
+                    <a href="https://facebook.com" class="me-3"><img src="images/facebook-icon.png" alt="Facebook" width="30"></a>
+                    <a href="https://twitter.com" class="me-3"><img src="images/twitter-icon.png" alt="Twitter" width="30"></a>
+                    <a href="https://whatsapp.com" class="me-3"><img src="images/whatsapp-icon.png" alt="Instagram" width="30"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer><!-- Footer -->
+<div id="footer-placeholder"></div>
+
+<!-- jQuery (Required for Footer Include) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(function() {
+        $("#footer-placeholder").load("footer.html");
+    });
+</script></footer>
+
+    <!-- Bootstrap JS -->
+    <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Form Validation Script -->
+    <script>
+        (function () {
+            'use strict'
+            var forms = document.querySelectorAll('.needs-validation')
+            Array.prototype.slice.call(forms).forEach(function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+                    form.classList.add('was-validated')
+                }, false)
+            })
+        })()
+    </script>
+
+    <!-- Custom JS -->
+    <script src="scripts/script.js"></script>
+
+</body>
+</html>
